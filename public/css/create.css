@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Poppins:wght@100;200;300;400&display=swap');
+
+:root {
+    --font-main: 'Montserrat', sans-serif;
+    --font-secundary: 'Poppins', sans-serif;
+    --color-main: #0B2B40;
+    --color-letter: #f0f8ff;
+
+}
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--color-main);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+
+}
+
+.header > .tittle {
+    font-family: var(--font-main);
+    font-size: 3em;
+    font-variant: small-caps;
+    font-weight: bolder;
+    color: #F2BE22;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main > .news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 3em;
+    color: var(--color-letter)
+}
+
+.link-create {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-create > .btn-create {
+    
+    padding: 6px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    font-family: var(--font-secundary);
+    cursor: pointer;
+    margin: 2em;
+
+}
+
+.link-create> .btn-create:hover {
+    background: #F2BE22;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition: 2s;
+    color: var(--color-main);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > p {
+    margin-top: 15em;
+    font-family: var(--font-main);
+}
+
+.footer > p > a {
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-weight: bold;
+    color: #F2BE22;
+}
+
+@media screen and (max-width: 375px) {
+    .header > p {
+        font-size: 0.6em;
+    }
+
+    .main > .form {
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .header > h1 {
+        font-size: 1.7em;
+        padding: 0em;
+    }
+
+    .main > .news {
+        padding: 0em;
+
+    }
+
+    .main > .news > label {
+        line-height: 1em;
+    }
+
+}
