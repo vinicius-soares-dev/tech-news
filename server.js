@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8000;
+const PORT = process.env.PORT || 8000;;
 const path = require('path');
 const bodyParser = require('body-parser');
 const route = require('./routes');
@@ -15,6 +15,6 @@ app.set('view engine', 'ejs');
 
 app.use(route);
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log('Escutando: http://localhost:8000');
 });
